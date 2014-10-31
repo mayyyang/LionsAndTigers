@@ -21,15 +21,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    MenuViewController *mvc = self.childViewControllers[1];
+    mvc.delegate = self;
 
-    self.childViewControllers.delegate = self;
-}
+    UINavigationController *nvc = self.childViewControllers[0];
+    PhotosViewController *pvc = (PhotosViewController *)nvc.topViewController;
+    pvc.delegate = self;
 
 -(void)topRevealButtonTapped
 {
 
 }
-
 
 
 

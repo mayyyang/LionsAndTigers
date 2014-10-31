@@ -22,12 +22,12 @@
 
 - (IBAction)lionButtonTapped:(UIButton *)sender
 {
-    [self.delegate isTigerButtonTapped];
+    [self.delegate buttonTapped:NO];
 }
 
 - (IBAction)tigerButtonTapped:(UIButton *)sender
 {
-    [self.delegate isTigerButtonTapped];
+    [self.delegate buttonTapped:YES];
 }
 
 

@@ -10,7 +10,7 @@
 
 @protocol HUDDelegate <NSObject>
 
--(BOOL)isTigerButtonTapped;
+-(void)buttonTapped:(BOOL)isTiger;
 
 @end
 
