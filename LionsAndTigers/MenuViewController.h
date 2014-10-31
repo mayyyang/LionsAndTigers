@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HUDDelegate <NSObject>
+
+-(BOOL)isTigerButtonTapped;
+
+@end
+
 @interface MenuViewController : UIViewController
+
+@property (nonatomic, weak) id <HUDDelegate> delegate;
+
+-(void)tigerButtonTapped:(UIButton *)sender;
+
+-(void)lionButtonTapped:(UIButton *)sender;
 
 @end

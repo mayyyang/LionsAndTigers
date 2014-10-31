@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8Z-Fw-CfM" userLabel="Container View (Bottom)">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
-                                    <segue destination="6fl-Gd-R9I" kind="embed" id="Lgh-aG-1rT"/>
+                                    <segue destination="eYW-UQ-bNA" kind="embed" id="Lgh-aG-1rT"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-1s-MUg" userLabel="Container View (Top)">
@@ -42,10 +42,14 @@
                             <constraint firstItem="ikw-1s-MUg" firstAttribute="top" secondItem="KvB-k8-EYD" secondAttribute="topMargin" id="sE3-Rk-Y3O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftConstraint" destination="X2r-4R-PP8" id="tiV-v4-U0n"/>
+                        <outlet property="rightContraint" destination="bzK-oa-bR7" id="187-xW-bug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxZ-7R-GUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="294"/>
+            <point key="canvasLocation" x="-673" y="-24"/>
         </scene>
         <!--Photos View Controller-->
         <scene sceneID="NxL-4t-8wY">
@@ -61,9 +65,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Ths-zN-6qq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="iaB-G4-JMT">
+                            <connections>
+                                <action selector="topRevealButtonTapped:" destination="6fl-Gd-R9I" id="7Ke-6A-Xpz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="itemBarButton" destination="iaB-G4-JMT" id="2ib-qc-pcN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Go-dF-mA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="317" y="458"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="Cej-j2-boU">
@@ -76,13 +91,51 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M4y-L4-hAv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjC-GJ-DOy">
+                                <rect key="frame" x="16" y="115" width="37" height="30"/>
+                                <state key="normal" title="Lions">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lionButtonTapped:" destination="NBp-NB-SlJ" eventType="touchUpInside" id="aF6-cL-9o1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-rr-WEK">
+                                <rect key="frame" x="13" y="203" width="42" height="30"/>
+                                <state key="normal" title="Tigers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tigerButtonTapped:" destination="NBp-NB-SlJ" eventType="touchUpInside" id="t2l-aB-nfN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbV-iG-H6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101" y="378"/>
+            <point key="canvasLocation" x="-109" y="-276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rlC-4p-60y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eYW-UQ-bNA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rZT-sL-grB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6fl-Gd-R9I" kind="relationship" relationship="rootViewController" id="CTf-Pu-nzh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pta-e4-j3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="453"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PhotoViewDelegate <NSObject>
+
+- (void)topRevealButtonTapped;
+
+@end
+
 @interface PhotosViewController : UIViewController
+
+@property (nonatomic, weak) id <PhotoViewDelegate> delegate;
 
 @end
