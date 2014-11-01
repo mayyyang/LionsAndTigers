@@ -1,13 +1,13 @@
 //
-//  RootViewController.h
+//  CustomCollectionViewCell.m
 //  LionsAndTigers
 //
 //  Created by Jonathan Kim on 11/1/14.
 //  Copyright (c) 2014 May Yang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CustomCollectionViewCell.h"
 
-@interface RootViewController : UIViewController
+@implementation CustomCollectionViewCell
 
 @end

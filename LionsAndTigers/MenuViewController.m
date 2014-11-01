@@ -2,7 +2,7 @@
 //  MenuViewController.m
 //  LionsAndTigers
 //
-//  Created by Jonathan Kim on 10/30/14.
+//  Created by Jonathan Kim on 11/1/14.
 //  Copyright (c) 2014 May Yang. All rights reserved.
 //
 
@@ -10,24 +10,24 @@
 
 @interface MenuViewController ()
 
-
 @end
 
 @implementation MenuViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
-- (IBAction)lionButtonTapped:(UIButton *)sender
+- (IBAction)onTigersButtonPressed:(UIButton *)sender
 {
-    [self.delegate buttonTapped:NO];
+    [self.delegate tigersButtonTapped];
 }
 
-- (IBAction)tigerButtonTapped:(UIButton *)sender
+- (IBAction)onLionsMenuPressed:(UIButton *)sender
 {
-    [self.delegate buttonTapped:YES];
+    [self.delegate lionsButtonTapped];
 }
 
 

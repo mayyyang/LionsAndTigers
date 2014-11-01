@@ -2,24 +2,21 @@
 //  MenuViewController.h
 //  LionsAndTigers
 //
-//  Created by Jonathan Kim on 10/30/14.
+//  Created by Jonathan Kim on 11/1/14.
 //  Copyright (c) 2014 May Yang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@protocol HUDDelegate <NSObject>
+@protocol MenuVCDelegate <NSObject>
 
--(void)buttonTapped:(BOOL)isTiger;
+-(void)tigersButtonTapped;
+-(void)lionsButtonTapped;
 
 @end
 
 @interface MenuViewController : UIViewController
 
-@property (nonatomic, weak) id <HUDDelegate> delegate;
-
--(void)tigerButtonTapped:(UIButton *)sender;
-
--(void)lionButtonTapped:(UIButton *)sender;
+@property (weak) id <MenuVCDelegate> delegate;
 
 @end
